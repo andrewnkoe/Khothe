@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Khothe Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('khothe_theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Khothe<span>Tourism</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html" class="active">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Register & Contact.html">Register & Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+                <span class="theme-toggle-track" aria-hidden="true">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span class="theme-toggle-label">Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Top Iconic Destinations</h2>
+
+        <div class="destination-row">
+            <div class="destination-img" style="background-image: url('maletsunyanefalls2.jfif');"></div>
+            <div class="destination-info">
+                <span class="tag">Waterfall</span>
+                <h3>Maletsunyane Falls</h3>
+                <p>Located near Semonkong, this breathtaking natural wonder is renowned for its thunderous sound and magnificent plume of spray. It holds a Guinness World Record for the longest commercially operated single-drop abseil in the world.</p>
+            </div>
+        </div>
+
+        <div class="destination-row">
+            <div class="destination-img" style="background-image: url('afriski.jfif');"></div>
+            <div class="destination-info">
+                <span class="tag">Ski Resort</span>
+                <h3>Afriski Mountain Resort</h3>
+                <p>Situated at 3,222 meters above sea level in the Maloti Mountains, Afriski offers a rare and magical snow experience in Africa. During warmer months, it transforms into an alpine hub for mountain biking, trail running, and high-altitude hiking.</p>
+            </div>
+        </div>
+
+        <div class="destination-row">
+            <div class="destination-img" style="background-image: url('mohaledam.jfif');"></div>
+            <div class="destination-info">
+                <span class="tag">Engineering Marvel</span>
+                <h3>Mohale Dam</h3>
+                <p>Forming a crucial component of the Lesotho Highlands Water Project, Mohale Dam is a majestic structural feat. Its sprawling waters reflect the rugged surrounding mountains, making it an excellent stopover for boating, photography, and birdwatching.</p>
+            </div>
+        </div>
+
+        <div class="destination-row">
+            <div class="destination-img" style="background-image: url('bmountain.jfif');"></div>
+            <div class="destination-info">
+                <span class="tag">Nature & Trails</span>
+                <h3>Beautiful Mountain Ranges</h3>
+                <p>The prominent Drakensberg and Maloti ranges map out Lesotho's majestic horizon. These ancient peaks host traditional Basotho communities, dynamic horse-riding trails, and incredible sandstone cliffs that challenge even seasoned hikers.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="footer-logo">Khothe<span>Tourism</span></a>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Register & Contact.html">Register & Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Khothe Tourism@2026.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

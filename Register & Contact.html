@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Contact | Khothe Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('khothe_theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Khothe<span>Tourism</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Register & Contact.html" class="active">Register & Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+                <span class="theme-toggle-track" aria-hidden="true">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span class="theme-toggle-label">Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Register & Contact Us</h2>
+        <p class="section-subtitle">
+            Sign up for tailored Lesotho travel packages and exclusive member perks, or get in touch directly with our local tour guides and booking office.
+        </p>
+
+        <!-- Quick Jump Navigation Pills -->
+        <div class="page-tabs">
+            <a href="#registration-section" class="tab-pill">
+                <span>&#128221;</span> Tourist Registration
+            </a>
+            <a href="#contact-section" class="tab-pill">
+                <span>&#128222;</span> Contact Information
+            </a>
+        </div>
+
+        <!-- ==========================================================================
+             Section 1: Tourist Registration Form
+             ========================================================================== -->
+        <section id="registration-section" class="form-card">
+            <div class="form-card-header">
+                <h3>Tourist & Member Registration</h3>
+                <p>Create your travel profile with Khothe Tourism for personalized itineraries, mountain expedition updates, and special rates.</p>
+            </div>
+
+            <form id="registrationForm" action="#" method="POST" onsubmit="event.preventDefault(); alert('Congratulations! Your Khothe Tourism registration has been submitted successfully. A travel coordinator will reach out to you.'); this.reset();">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-fullname">Full Name</label>
+                        <input type="text" id="reg-fullname" name="fullname" placeholder="e.g. Katleho Khothe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" name="email" placeholder="e.g. katleho@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-phone">Phone / WhatsApp Number</label>
+                        <input type="tel" id="reg-phone" name="phone" placeholder="e.g. +266 5800 0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-country">Country / Nationality</label>
+                        <input type="text" id="reg-country" name="country" placeholder="e.g. Lesotho, South Africa, International" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-destination">Primary Destination of Interest</label>
+                        <select id="reg-destination" name="destination" required>
+                            <option value="" disabled selected>Select a destination...</option>
+                            <option value="Maletsunyane Falls">Maletsunyane Falls (Semonkong)</option>
+                            <option value="Afriski Mountain Resort">Afriski Mountain Resort (Maloti)</option>
+                            <option value="Mohale Dam">Mohale Dam (Highlands Water Project)</option>
+                            <option value="Katse Dam">Katse Dam & Botanical Gardens</option>
+                            <option value="Thaba Bosiu">Thaba Bosiu Cultural Village</option>
+                            <option value="Sani Pass">Sani Pass & Drakensberg Escarpment</option>
+                            <option value="Other">Custom Lesotho Tour</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-travel-style">Preferred Travel Style</label>
+                        <select id="reg-travel-style" name="travel_style" required>
+                            <option value="" disabled selected>Select travel style...</option>
+                            <option value="Solo Explorer">Solo Explorer</option>
+                            <option value="Couples Getaway">Couples Getaway</option>
+                            <option value="Family Vacation">Family Vacation</option>
+                            <option value="Hiking & Backpacking">Rugged Hiking & Backpacking</option>
+                            <option value="Winter Snow & Skiing">Winter Snow & Skiing</option>
+                            <option value="Group / Educational">Group / Educational Tour</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-travel-date">Expected Travel Date</label>
+                        <input type="date" id="reg-travel-date" name="travel_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-guests">Number of Guests</label>
+                        <input type="number" id="reg-guests" name="guests" min="1" max="50" placeholder="1" value="1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-password">Create Account Password</label>
+                        <input type="password" id="reg-password" name="password" placeholder="At least 6 characters" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password</label>
+                        <input type="password" id="reg-confirm-password" name="confirm_password" placeholder="Re-enter password" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-notes">Special Requests / Dietary / Medical Notes (Optional)</label>
+                    <textarea id="reg-notes" name="notes" placeholder="Please specify if you need 4x4 transport, pony trekking, gear rental, or dietary accommodations..."></textarea>
+                </div>
+
+                <label class="form-checkbox">
+                    <input type="checkbox" id="reg-terms" required>
+                    <span>I agree to the <a href="#" style="color: var(--primary-color); font-weight: 700;">Terms of Service</a> and Lesotho Tourism safety guidelines.</span>
+                </label>
+
+                <label class="form-checkbox">
+                    <input type="checkbox" id="reg-newsletter" checked>
+                    <span>Send me seasonal snow forecasts, trail alerts, and special tour packages.</span>
+                </label>
+
+                <button type="submit" class="btn-submit" style="margin-top: 10px;">Complete Registration</button>
+            </form>
+        </section>
+
+        <!-- ==========================================================================
+             Section 2: Contact Information & Direct Inquiries
+             ========================================================================== -->
+        <section id="contact-section">
+            <h2 class="section-title" style="margin-top: 50px;">Contact Information & Inquiries</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p class="contact-intro">
+                        Planning to witness the thundering Maletsunyane Falls or ski high in the Maloti Mountains at Afriski? Reach out to the Khothe Tourism team for personalized itineraries, route guidance, and booking assistance.
+                    </p>
+
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">&#128205;</div>
+                            <div class="contact-item-text">
+                                <strong>Location</strong>
+                                <span>Kingsway Road, Maseru 100, Lesotho</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">&#128222;</div>
+                            <div class="contact-item-text">
+                                <strong>Phone Number</strong>
+                                <span>+266 2231 2238 / +266 5800 0000</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">&#9993;</div>
+                            <div class="contact-item-text">
+                                <strong>Email Inquiries</strong>
+                                <span>info@khothetourism.co.ls</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">&#128340;</div>
+                            <div class="contact-item-text">
+                                <strong>Operating Hours</strong>
+                                <span>Monday – Friday: 08:00 – 17:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contactForm" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for reaching out to Khothe Tourism! Our travel specialists will contact you shortly.'); this.reset();">
+                        <div class="form-group">
+                            <label for="contact-name">Your Full Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="e.g. Katleho Khothe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" name="email" placeholder="e.g. khothe@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-destination">Interested Destination / Tour</label>
+                            <input type="text" id="contact-destination" name="destination" placeholder="e.g. Maletsunyane Falls, Afriski, Hiking Trails">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Your Message</label>
+                            <textarea id="contact-message" name="message" placeholder="Tell us how we can help plan your journey..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="footer-logo">Khothe<span>Tourism</span></a>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Register & Contact.html">Register & Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Khothe Tourism@2026.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

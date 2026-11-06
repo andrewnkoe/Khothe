@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Khothe Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('khothe_theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Khothe<span>Tourism</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Register & Contact.html">Register & Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+                <span class="theme-toggle-track" aria-hidden="true">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span class="theme-toggle-label">Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">About Khothe Tourism</h2>
+        <div class="about-layout">
+            <div class="about-text">
+                <p>
+                    Lesotho is a high-altitude, landlocked kingdom encircled completely by South Africa. Known proudly as the <strong>"Kingdom in the Sky,"</strong> it is the only independent state on Earth that lies entirely above 1,400 meters in elevation.
+                </p>
+                <p>
+                    At <strong>Lesotho Tourism</strong>, our mission is to showcase the breathtaking natural splendor, rich Basotho heritage, alpine climates, and pristine river networks to travelers from all around the world.
+                </p>
+                <p>
+                    Whether you are traversing rugged mountain passes on horseback, chasing roaring cascades like Maletsunyane Falls, or seeking winter thrills at Afriski Mountain Resort, Lesotho Tourism delivers unforgettable and authentic journeys.
+                </p>
+
+                <div class="about-features">
+                    <div class="feature-box">
+                        <h4>1,400m+</h4>
+                        <p>World's highest lowest elevation</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4>300+ Days</h4>
+                        <p>Annual sunshine in the highlands</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4>100% Alpine</h4>
+                        <p>Scenic mountain adventures</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+               <img src="mountain1.jfif">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="footer-logo">Khothe<span>Tourism</span></a>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Register & Contact.html">Register & Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Khothe Tourism@2026.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
